@@ -1,0 +1,61 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql8-177aeadbdfc-2d710e34fed0a10f": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "localhost",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"url": "jdbc:mysql://localhost:3306/",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"mysql8-177aeb9f55a-97660d4c4ac5ef1": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "native_jdbc",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "native_jdbc",
+				"url": "jdbc:mysql://localhost:3306/native_jdbc",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"mysql8-177aeb9f55a-97660d4c4ac5ef1": {
+			"nsc_coffee": {
+				":product": {
+					"properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"product\" time=\"202102231402\"><entities><data-source id=\"mysql8-177aeb9f55a-97660d4c4ac5ef1\"><entity id=\"1\" name=\"product\" fq-name=\"nsc_coffee.product\" order=\"0\" color-bg=\"255,128,64\" border-width=\"3\" x=\"507\" y=\"48\"><path name=\"nsc_coffee\"/></entity><entity id=\"2\" name=\"sale\" fq-name=\"nsc_coffee.sale\" order=\"1\" x=\"20\" y=\"20\"><path name=\"nsc_coffee\"/></entity><entity id=\"3\" name=\"sale_detail\" fq-name=\"nsc_coffee.sale_detail\" order=\"2\" x=\"186\" y=\"239\"><path name=\"nsc_coffee\"/></entity></data-source></entities><relations><relation name=\"fk_product_code\" fq-name=\"nsc_coffee.sale.fk_product_code\" type=\"fk\" pk-ref=\"1\" fk-ref=\"2\"/><relation name=\"fk_saletable_code\" fq-name=\"nsc_coffee.sale_detail.fk_saletable_code\" type=\"fk\" pk-ref=\"2\" fk-ref=\"3\"/></relations></diagram>"
+						}
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}
